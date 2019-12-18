@@ -15,22 +15,18 @@ namespace drill67
             Console.WriteLine("Person 1");
             Console.WriteLine("Please input your information below: \n");
             Console.WriteLine("Hourly rate: ");
-            string hourly1 = Console.ReadLine();
-            int rate1 = Convert.ToInt32(hourly1);
+            int rate1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Hours worked per week: ");
-            string weekly1 = Console.ReadLine();
-            int week1 = Convert.ToInt32(weekly1);
+            int week1 = Convert.ToInt32(Console.ReadLine());
             int salary1 = rate1 * week1;
 
             //person 2
             Console.WriteLine("\nPerson 2");
             Console.WriteLine("Please input your information below: \n");
             Console.WriteLine("Hourly rate: ");
-            string hourly2 = Console.ReadLine();
-            int rate2 = Convert.ToInt32(hourly2);
+            int rate2 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Hours worked per week: ");
-            string weekly2 = Console.ReadLine();
-            int week2 = Convert.ToInt32(weekly2);
+            int week2 = Convert.ToInt32(Console.ReadLine());
             int salary2 = rate2 * week2;
 
             //comparison fn
