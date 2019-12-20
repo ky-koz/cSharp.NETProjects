@@ -27,7 +27,7 @@ namespace drill92
                 int length = Convert.ToInt32(Console.ReadLine());
                 int size = width + length + height;
                 double total = (double)(size * weight) / 100.00; //cannot get to display with two decimals, only one
-                Console.WriteLine("Your estimated total for shipping this package is: $" + total);
+                Console.WriteLine("Your estimated total for shipping this package is: $" + total + "\nThank you.");
             }
             else
             {
