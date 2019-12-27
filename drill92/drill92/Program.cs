@@ -20,14 +20,22 @@ namespace drill92
             else if (weight <= 50)
             {
                 Console.WriteLine("Please enter the package width: ");
-                int width = Convert.ToInt32(Console.ReadLine());
+                float width = float.Parse(Console.ReadLine());
                 Console.WriteLine("Please enter the package height: ");
-                int height = Convert.ToInt32(Console.ReadLine());
+                float height = float.Parse(Console.ReadLine());
                 Console.WriteLine("Please enter the package length: ");
-                int length = Convert.ToInt32(Console.ReadLine());
-                int size = width + length + height;
-                double total = (double)(size * weight) / 100.00; //cannot get to display with two decimals, only one
-                Console.WriteLine("Your estimated total for shipping this package is: $" + total + "\nThank you.");
+                float length = float.Parse(Console.ReadLine());
+                float size = width + length + height;
+                if (size > 50)
+                {
+                    Console.WriteLine("Package too big to be shipped via Package Express.");
+                }
+                else
+                {
+                    double total = (double)(size * weight) / 100.00; //cannot get to display with two decimals, only one
+                    Console.WriteLine("Your estimated total for shipping this package is: $" + total + "\nThank you.");
+                }
+                
             }
             else
             {
