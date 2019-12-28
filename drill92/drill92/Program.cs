@@ -12,7 +12,7 @@ namespace drill92
         {
             Console.WriteLine("Welcome to Package Express. Please follow the instructions below.");
             Console.WriteLine("Please enter the package weight: ");
-            int weight = Convert.ToInt32(Console.ReadLine());
+            float weight = float.Parse(Console.ReadLine());
             if (weight > 50)
             {
                 Console.WriteLine("Package too heavy to be shipped via Package Express. Have a good day.");
@@ -33,7 +33,8 @@ namespace drill92
                 else
                 {
                     double total = (double)(size * weight) / 100.00; //cannot get to display with two decimals, only one
-                    Console.WriteLine("Your estimated total for shipping this package is: $" + total + "\nThank you.");
+                    Console.WriteLine("Your estimated total for shipping this package is: " + total.ToString("C", System.Globalization.CultureInfo.CurrentCulture) + "\nThank you.");
+                    
                 }
                 
             }
