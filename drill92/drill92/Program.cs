@@ -40,7 +40,7 @@ namespace drill92
             }
             else
             {
-                Console.WriteLine("Oops! There was an error with your input.");
+                Console.WriteLine("Oops! There was an error with your input."); //this doesn't work for string input with letters
             }
             Console.Read();
         }
