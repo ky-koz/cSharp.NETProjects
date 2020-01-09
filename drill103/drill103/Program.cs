@@ -27,16 +27,18 @@ namespace drill103
                 "Willoughby",
                 "Nash",
                 };
-            Console.WriteLine("Please type your last name: ");
-            string lname = Console.ReadLine();
-            nameList.Add(lname);
+            Console.WriteLine("Please type your first name: ");
+            string fname = Console.ReadLine() + " ";
+            
 
-            Console.WriteLine("\nThank you. \nFull list of last names:");
-
-            foreach (string i in nameList)
+            Console.WriteLine("\nThank you. \nYour name with diff last names:");
+            
+            for (int i = 0; i < nameList.Count; i++)
             {
-                Console.WriteLine(i);
+                nameList[i] = fname + nameList[i];
+                Console.WriteLine(nameList[i]);
             }
+            
             Console.ReadLine();
 
 
@@ -50,36 +52,33 @@ namespace drill103
                 infinite = false;
             };
             Console.WriteLine();
-            
+
             // 4. Create a loop where the comparison used to determine whether to continue 
             // iterating the loop is a “<” operator.
 
-            int less = 99;
-            if (less < 12)
+            int[] ages = { 23, 54, 64, 3, 16, 79, 90, 37 };
+            for (int i = 0; i < ages.Length; i++)
             {
-                Console.WriteLine(less + " is less than 12!");
-                Console.ReadLine();
+                if (ages[i] > 65)
+                {
+                    Console.WriteLine("Senior citizen age: " + ages[i]);
+                }
             }
-            else if (less > 12)
-            {
-                Console.WriteLine(less + " is not less than 12.");
-                Console.ReadLine();
-            }
+            Console.ReadLine();
 
             // 5. Create a loop where the comparison used to determine whether to continue 
             // iterating the loop is a “<=” operator.
+            //have to use upper/lower bound to avoid out of range errors
 
-            int lessOr = 99;
-            if (lessOr <= 20)
+            //using the list from the previous one
+            for (int i = ages.GetLowerBound(0); i <= ages.GetUpperBound(0); i++)
             {
-                Console.WriteLine(less + " is less than or equal 20!");
-                Console.ReadLine();
+                if (ages[i] > 65)
+                {
+                    Console.WriteLine("Senior citizen age: " + ages[i]);
+                }
             }
-            else if (lessOr > 12)
-            {
-                Console.WriteLine(lessOr + " is greater than 20.\n");
-                Console.ReadLine();
-            }
+            Console.ReadLine();
 
             // 6. Create a List of strings where each item in the list is unique. Ask the 
             // user to select text to search for in the List. Create a loop that iterates 
