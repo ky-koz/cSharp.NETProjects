@@ -24,28 +24,33 @@ namespace drill147
                 Console.WriteLine(itemA);
             }
 
-           
-
-
-            try
+            bool loop = true;
+            while (loop == true)
             {
-                //asks user for int input to divide items in listA by
-                Console.WriteLine("\nPlease type an integer to divide each item of the list by: ");
-                int userInt = Convert.ToInt32(Console.ReadLine());
-
-                //divide each item by user int
-                foreach (int itemA in listA)
+                try
                 {
-                    int newItem = itemA / userInt;
-                    Console.WriteLine("{0} divided by {1} equals {2}.", itemA, userInt, newItem);
+                    //asks user for int input to divide items in listA by
+                    Console.WriteLine("\nPlease type an integer to divide each item of the list by: ");
+                    int userInt = Convert.ToInt32(Console.ReadLine());
+
+                    //divide each item by user int
+                    foreach (int itemA in listA)
+                    {
+                        int newItem = itemA / userInt;
+                        Console.WriteLine("{0} divided by {1} equals {2}.", itemA, userInt, newItem);
+                    }
+                    loop = false;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message); //will write out error message
                 }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message); //will write out error message
-            }
-
+            Console.WriteLine("The program has emerged from the try/catch block and continued on with program execution.");
             Console.Read();
+
+
+
 
             //2.Run that code, entering in non - zero numbers as the user.Look at the displayed results.
 
