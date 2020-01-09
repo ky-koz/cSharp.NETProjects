@@ -32,20 +32,15 @@ namespace drill103
             nameList.Add(lname);
 
             Console.WriteLine("\nThank you. \nFull list of last names:");
-         
+
             foreach (string i in nameList)
-            Console.WriteLine(i);
-            Console.ReadLine();
+            {
+                Console.WriteLine(i);
+                Console.ReadLine();
+            }
 
 
             // 2. Create an infinite loop.
-
-            //bool infinite = true;
-            //while (infinite)
-            //{
-            //    Console.WriteLine("infinite");
-            //};
-
             // 3. Fix the infinite loop so it will execute.
 
             bool infinite = true;
@@ -105,8 +100,10 @@ namespace drill103
                 "orange",
             };
             foreach (string i in colorList)
-            Console.WriteLine(i);
-            Console.WriteLine();
+            {
+                Console.WriteLine(i);
+                Console.WriteLine();
+            }
 
             string color = Console.ReadLine();
 
@@ -125,7 +122,6 @@ namespace drill103
             };
             Console.WriteLine();
 
-
             
             // 9. Create a List of strings that has at least two identical strings in the 
             // List. Ask the user to select text to search for in the List. Create a loop 
@@ -143,8 +139,10 @@ namespace drill103
 
             // prints the list
             foreach (string i in doubleList)
-            Console.WriteLine(i);
-            Console.WriteLine();
+            {
+                Console.WriteLine(i);
+                Console.WriteLine();
+            }
 
             //user input
             string input = Console.ReadLine();
@@ -186,12 +184,13 @@ namespace drill103
             };
 
             foreach (string item1 in listC)
-            Console.WriteLine(item1);
-            Console.WriteLine();
+            {
+                Console.WriteLine(item1);
+                Console.WriteLine();
+            }
 
             Console.WriteLine("Now checking for duplicates...");
-
-            //make foreach, if exist then add and write exists, else add and write
+            
             List<string> listCheck = new List<string>();
             foreach (string item1 in listC)
             {
