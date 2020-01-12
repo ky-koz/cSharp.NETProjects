@@ -10,7 +10,7 @@ namespace drill156
     {
         static void Main(string[] args)
         {
-            //Does this create an object for the class methods to exist?
+            //This creates an object for the class methods to exist
             Class1 operations = new Class1();
 
 
