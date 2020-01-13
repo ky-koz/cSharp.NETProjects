@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9D2E3F77-D0B8-4A16-ABA9-C108C3AB9227}</ProjectGuid>
+    <ProjectGuid>{FD6E5511-FEFE-494D-B8DF-1B3EF9A32756}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>drill160</RootNamespace>
-    <AssemblyName>drill160</AssemblyName>
+    <RootNamespace>drill161</RootNamespace>
+    <AssemblyName>drill161</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
