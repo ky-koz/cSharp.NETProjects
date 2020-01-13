@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace drill160
 {
-    class Class1
+    public class Class2
     {
+        public int Math(int req, int opt = 5)
+        {
+            return req * opt;
+        }
     }
 }
