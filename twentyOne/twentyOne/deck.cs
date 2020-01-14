@@ -10,7 +10,10 @@ namespace twentyOne
     {
         public Deck()
         {
+            //constructor
             Cards = new List<Card>();
+            
+
             List<string> Suits = new List<string>() { "Clubs", "Hearts", "Diamonds", "Spades" };
             List<string> Faces = new List<string>()
             {
@@ -31,7 +34,29 @@ namespace twentyOne
             }
 
         }
+        //properties
         public List<Card> Cards { get; set; }
+
+        //method
+        public void Shuffle(int times = 1) // removed: Deck deck, out int timesShuffled,
+        {
+            //timesShuffled = 0;
+            for (int i = 0; i < times; i++)
+            {
+                //timesShuffled++;
+                List<Card> TempList = new List<Card>();
+                Random random = new Random();
+
+                while (Cards.Count > 0)
+                {
+                    int randomIndex = random.Next(0, Cards.Count);
+                    TempList.Add(Cards[randomIndex]);
+                    Cards.RemoveAt(randomIndex); //.removeAt is a list method
+                }
+                Cards = TempList; //this.Cards refers to itself
+            }
+
+        }
     }
 }
 

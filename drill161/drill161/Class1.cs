@@ -10,7 +10,7 @@ namespace drill161
     {
         public void Nothing(int var1, int var2)
         {
-            int math = var2 * 2;
+            int math = var1 * 2;
             Console.WriteLine(var2);
         }
     }
