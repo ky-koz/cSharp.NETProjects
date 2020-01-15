@@ -10,16 +10,22 @@ namespace twentyOne
     {
         static void Main(string[] args)
         {
-            Deck deck = new Deck();
-            deck.Shuffle(3);
-
-
-            foreach (Card card in deck.Cards)
-            {
-                Console.WriteLine(card.Face + " of " + card.Suit);
-            }
-            Console.WriteLine(deck.Cards.Count);
+            //TwentyOneGame game = new TwentyOneGame();
+            Game game = new Game();
+            game.Players = new List<string>() { "Jesse", "Bill", "Joe" }; //calling a superclass method
+            game.ListPlayers();
+            game.Play();
             Console.ReadLine();
+
+            //Deck deck = new Deck();
+            //deck.Shuffle(3);
+
+            //foreach (Card card in deck.Cards)
+            //{
+            //    Console.WriteLine(card.Face + " of " + card.Suit);
+            //}
+            //Console.WriteLine(deck.Cards.Count);
+            //Console.ReadLine();
         }
 
         //randomly remove a cards from deck and put it into a temp deck, do that until deck count is at 0
@@ -35,6 +41,10 @@ namespace twentyOne
         //}
     }
 }
+
+//Game game = new Game();
+//game.Dealer = "Jesse";
+//game.Name = "TwentyOne";
 
 //Console.WriteLine("Time shuffled: {0}", timesShuffled);
 
