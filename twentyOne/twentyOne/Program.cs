@@ -10,42 +10,44 @@ namespace twentyOne
     {
         static void Main(string[] args)
         {
-            //TwentyOneGame game = new TwentyOneGame();
-            Game game = new Game();
-            game.Players = new List<string>() { "Jesse", "Bill", "Joe" }; //calling a superclass method
+            TwentyOneGame game = new TwentyOneGame();
+            game.Players = new List<string>() { "Jesse", "Bill", "Bob" };
             game.ListPlayers();
-            game.Play();
             Console.ReadLine();
 
-            //Deck deck = new Deck();
-            //deck.Shuffle(3);
+            //    Deck deck = new Deck();
+            //    deck.Shuffle(3);
 
-            //foreach (Card card in deck.Cards)
-            //{
-            //    Console.WriteLine(card.Face + " of " + card.Suit);
-            //}
-            //Console.WriteLine(deck.Cards.Count);
-            //Console.ReadLine();
+            //    foreach (Card card in deck.Cards)
+            //    {
+            //        Console.WriteLine(card.Face + " of " + card.Suit);
+            //    }
+            //    Console.WriteLine(deck.Cards.Count);
+            //    Console.ReadLine();
         }
 
-        //randomly remove a cards from deck and put it into a temp deck, do that until deck count is at 0
-       
-
-        //public static Deck Shuffle(Deck deck, int times)
-        //{
-        //   for (int i = 0; i < times; i++)
-        //   {
-        //        deck = Shuffle(deck);
-        //   }
-        //   return deck;
-        //}
     }
 }
 
+//List<Game> games = new List<Game>();
+//Game game = new TwentyOneGame(); //polymorphism, ecause twentyonegame inherits from game
+//games.Add(game);
+//PokerGame
+//SolitaireGame
+
+/*-------------------*/
+//TwentyOneGame game = new TwentyOneGame();
+//game.Players = new List<string>() { "Jesse", "Bill", "Joe" }; //calling a superclass method
+//game.ListPlayers();
+//game.Play();
+//Console.ReadLine();
+
+/*-------------------*/
 //Game game = new Game();
 //game.Dealer = "Jesse";
 //game.Name = "TwentyOne";
 
+/*-------------------*/
 //Console.WriteLine("Time shuffled: {0}", timesShuffled);
 
 //int timesShuffled = 0; //must create the object outside of the loop
@@ -53,7 +55,7 @@ namespace twentyOne
 //deck = Shuffle(deck: deck, times: 3);
 //deck = Shuffle(deck, out timesShuffled, 3);
 
-
+/*-------------------*/
 //This method would require adding a card one by one, instead could use a deck constructor
 //deck.Cards = new List<Card>(); //deck has property of Cards, with a data type of list<card>, instantiated with new
 
@@ -65,6 +67,19 @@ namespace twentyOne
 
 //Console.WriteLine(cardOne.Face + " of " + cardOne.Suit);
 
+/*-------------------*/
 
 //Console.WriteLine(deck.Cards[0].Face + " of " + deck.Cards[0].Suit);
+
+/*-------------------*/
+//randomly remove a cards from deck and put it into a temp deck, do that until deck count is at 0
+
+//public static Deck Shuffle(Deck deck, int times)
+//{
+//   for (int i = 0; i < times; i++)
+//   {
+//        deck = Shuffle(deck);
+//   }
+//   return deck;
+//}
 

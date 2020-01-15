@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ACA67769-0ADC-4360-9F5A-71734C6CE5F4}</ProjectGuid>
+    <ProjectGuid>{42627CDF-B3CE-4CB0-A0CC-F400AA1EE1D4}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>twentyOne</RootNamespace>
-    <AssemblyName>twentyOne</AssemblyName>
+    <RootNamespace>drill176</RootNamespace>
+    <AssemblyName>drill176</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="card.cs" />
-    <Compile Include="Dealer.cs" />
-    <Compile Include="deck.cs" />
-    <Compile Include="Game.cs" />
-    <Compile Include="Player.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TwentyOneGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
