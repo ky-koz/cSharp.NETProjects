@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace twentyOne
 {
-    public class TwentyOneGame : Game //this means class TwentyOneGame will inherit from class Game
+    public class TwentyOneGame : Game, IWalkAway //this means class TwentyOneGame will inherit from class Game
     {
         public override void Play() //in order to inherit the abstract method, use the same name, data type, parameters, and the override keyword
         {
@@ -16,6 +16,10 @@ namespace twentyOne
         {
             Console.WriteLine("21 Players:");
             base.ListPlayers();
+        }
+        public void WalkAway(Player player)
+        {
+            throw new NotImplementedException();
         }
     }
 }
