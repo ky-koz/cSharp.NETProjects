@@ -9,28 +9,34 @@ namespace twentyOne
     class Program
     {
         static void Main(string[] args)
+
         {
-            TwentyOneGame game = new TwentyOneGame();
-            game.Players = new List<string>() { "Jesse", "Bill", "Bob" };
-            game.ListPlayers();
+            Game game = new TwentyOneGame(); //enabling polymorphism here again
+            game.Players = new List<Player>();
+            Player player = new Player();
+            player.Name = "Jesse";
+            game += player; // same as game = game + player
+            game -= player; //same as game = game - player
+
+            Deck deck = new Deck();
+            deck.Shuffle(3);
+            foreach (Card card in deck.Cards)
+            {
+                Console.WriteLine(card.Face + " of " + card.Suit);
+            }
+            Console.WriteLine(deck.Cards.Count);
             Console.ReadLine();
-
-            //    Deck deck = new Deck();
-            //    deck.Shuffle(3);
-
-            //    foreach (Card card in deck.Cards)
-            //    {
-            //        Console.WriteLine(card.Face + " of " + card.Suit);
-            //    }
-            //    Console.WriteLine(deck.Cards.Count);
-            //    Console.ReadLine();
         }
 
     }
 }
+//TwentyOneGame game = new TwentyOneGame();
+//game.Players = new List<string>() { "Jesse", "Bill", "Bob" };
+//game.ListPlayers();
+//Console.ReadLine();
 
 //List<Game> games = new List<Game>();
-//Game game = new TwentyOneGame(); //polymorphism, ecause twentyonegame inherits from game
+//Game game = new TwentyOneGame(); //polymorphism, because twentyonegame inherits from game
 //games.Add(game);
 //PokerGame
 //SolitaireGame

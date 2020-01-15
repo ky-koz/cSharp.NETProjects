@@ -13,6 +13,8 @@ namespace drill179
             IQuittable quit = new Employee();
 
             quit.Quit();
+
+            Console.ReadLine();
         }
     }
 }
