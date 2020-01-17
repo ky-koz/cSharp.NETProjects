@@ -11,13 +11,7 @@ namespace twentyOne
         static void Main(string[] args)
 
         {
-            Game game = new TwentyOneGame(); //enabling polymorphism here again
-            game.Players = new List<Player>();
-            Player player = new Player();
-            player.Name = "Jesse";
-            game += player; // same as game = game + player
-            game -= player; //same as game = game - player
-
+            
             Deck deck = new Deck();
             deck.Shuffle(3);
             foreach (Card card in deck.Cards)
@@ -30,11 +24,25 @@ namespace twentyOne
 
     }
 }
+
+//Player<Card> player = new Player<Card>(); //using generics
+//player.Hand = new List<Card>();
+
+/*-------------------*/
+//Game game = new TwentyOneGame(); //enabling polymorphism here again
+//game.Players = new List<Player>();
+//Player player = new Player();
+//player.Name = "Jesse";
+//game += player; // same as game = game + player
+//game -= player; //same as game = game - player    
+
+/*-------------------*/
 //TwentyOneGame game = new TwentyOneGame();
 //game.Players = new List<string>() { "Jesse", "Bill", "Bob" };
 //game.ListPlayers();
 //Console.ReadLine();
 
+/*-------------------*/
 //List<Game> games = new List<Game>();
 //Game game = new TwentyOneGame(); //polymorphism, because twentyonegame inherits from game
 //games.Add(game);
