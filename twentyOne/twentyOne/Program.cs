@@ -11,7 +11,6 @@ namespace twentyOne
         static void Main(string[] args)
 
         {
-            
             Deck deck = new Deck();
             deck.Shuffle(3);
             foreach (Card card in deck.Cards)
@@ -21,10 +20,31 @@ namespace twentyOne
             Console.WriteLine(deck.Cards.Count);
             Console.ReadLine();
         }
+        
 
     }
 }
 
+//enums
+//Card card = new Card();
+//int underlyingValue = (int)Suit.Diamonds; //or Convert.ToInt32
+//Console.Write(underlyingValue); //underlying data type is int, auto prints off the indices at the int value, unless set(=) otherwise
+
+//ConsoleColor color = ConsoleColor.DarkYellow;
+//DaysOfTheWeek day = DaysOfTheWeek.Monday;
+
+//public enum DaysOfTheWeek
+//{
+//    Monday,
+//    Tuesday,
+//    WEdnesday,
+//    Thursday,
+//    Friday,
+//    Saturday,
+//    Sunday
+//}
+
+/*-------------------*/
 //Player<Card> player = new Player<Card>(); //using generics
 //player.Hand = new List<Card>();
 

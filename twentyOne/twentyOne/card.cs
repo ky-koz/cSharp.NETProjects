@@ -8,15 +8,47 @@ namespace twentyOne
 {
     public class Card
     {
-        //this is a constructor in which the values are default for the class
-        public Card()
-        {
-            Suit = "Spades";
-            Face = "Two";
-        }
-
-
-        public string Suit { get; set; }
-        public string Face { get; set; }
+    //this is a constructor in which the values are default for the class
+        public Suit Suit { get; set; } // no longer a string, now an enum data type "Suit"
+        public Face Face { get; set; }
+    } 
+    public enum Suit
+    {
+        Clubs,
+        Diamonds,
+        Hearts,
+        Spades
     }
+    public enum Face
+    {
+        Two,
+        Three,
+        Four,
+        Five,
+        Six,
+        Seven,
+        Eight,
+        Nine,
+        Ten,
+        Jack,
+        Queen,
+        King,
+        Ace
+    }
+    
 }
+
+
+//public Card()
+//{
+//    Suit = "Spades";
+//    Face = "Two";
+//}
+
+//public enum Suit
+//{
+//    Clubs=4,
+//    Diamonds=10,
+//    Hearts=12,
+//    Spades=15
+//}
