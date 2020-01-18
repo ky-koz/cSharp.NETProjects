@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace twentyOne
 {
-    public class Card
+    public struct Card
     {
     //this is a constructor in which the values are default for the class
         public Suit Suit { get; set; } // no longer a string, now an enum data type "Suit"

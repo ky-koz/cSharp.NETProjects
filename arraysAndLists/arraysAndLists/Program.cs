@@ -21,7 +21,7 @@ namespace arraysAndLists
 
             // byte[] byteArray =
             //List<int> intList = new List<int>();
-            //intList.Add(4);
+            //intList.Add(4);new 
             //intList.Add(10);
             //intList.Add(31);
             //intList.Remove(10);

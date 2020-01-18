@@ -29,7 +29,7 @@ namespace drill75
             //qualified = trueOrFalse
             //Console.WriteLine("Qualified? \n" + qualified)
 
-            //     bool trueOrFalse = salary1 > salary2;
+            //bool trueOrFalse = salary1 > salary2;
             //Console.WriteLine("Does Person 1 make more than Person 2?");
             //Console.Write(trueOrFalse.ToString());
             //Console.WriteLine("Do you need help with anything? Please answer \"true\" or \"false\".");

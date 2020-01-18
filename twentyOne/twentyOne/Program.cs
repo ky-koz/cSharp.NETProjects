@@ -11,14 +11,8 @@ namespace twentyOne
         static void Main(string[] args)
 
         {
-            Card card1 = new Card();
-            Card card2 = card1;
-            card1.Face = Face.Eight;
-            card2.Face = Face.King;
-
-            Console.WriteLine(card1.Face);
-
             Deck deck = new Deck();
+
             deck.Shuffle(3);
 
             foreach (Card card in deck.Cards)
@@ -32,7 +26,47 @@ namespace twentyOne
 
     }
 }
+//lambda
+//List<int> numberList = new List<int>() { 1, 3, 25, 634, 41, 34 };
+//int sum = numberList.Where(x => x > 20).Sum();
+//int sum = numberList.Sum();
+//int sum = numberList.Max();
+//int sum = numberList.Min();
+//int sum = numberList.Sum(x => x + 5);
+//Console.WriteLine(sum);
 
+
+// => is a unique lambda function operator
+//List<Card> newList = deck.Cards.Where(x => x.Face == Face.King).ToList(); //Where is similar to a SQL where to filter items
+//foreach (Card card in newList)
+//{
+//    Console.WriteLine(card.Face);
+//}
+
+//int count = deck.Cards.Count(x => x.Face == Face.Ace); //counting all the elements(x) where(=>) x.Face equals Face.Ace
+//Console.WriteLine(count);
+
+//lambda alternative
+//int counter = 0;
+//foreach (Card card in deck.Cards)
+//{
+//    if (card.Face == Face.Ace)
+//    {
+//        counter++;
+//    }
+//}
+//Console.WriteLine(counter);
+
+//structs
+
+//Card card1 = new Card();
+//Card card2 = card1; //not a new object, a new name for it - this would not work with strings
+//card1.Face = Face.Eight;
+//card2.Face = Face.King;
+
+//Console.WriteLine(card1.Face);
+
+/*-------------------*/
 //enums
 //Card card = new Card();
 //int underlyingValue = (int)Suit.Diamonds; //or Convert.ToInt32
