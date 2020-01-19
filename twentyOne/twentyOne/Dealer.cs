@@ -20,6 +20,7 @@ namespace twentyOne
             Console.WriteLine(card);
             using (StreamWriter file = new StreamWriter(@"C: \Users\Kyla Kozole\Desktop\Repositories\c#.NET\Logs\log.txt", true)) //log the string card, dealing with unmanaged code, have to dispose of afterwards
             {
+                file.WriteLine(DateTime.Now);
                 file.WriteLine(card);
             }
             Deck.Cards.RemoveAt(0); //removeat is a method of any list, where you pass in an index of where you want to remove
