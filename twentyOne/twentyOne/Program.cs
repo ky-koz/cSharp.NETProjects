@@ -3,29 +3,55 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace twentyOne
 {
     class Program
     {
         static void Main(string[] args)
-
         {
-            Deck deck = new Deck();
-
-            deck.Shuffle(3);
-
-            foreach (Card card in deck.Cards)
+            
+            Console.WriteLine("Welcome to the Grand Hotel and Casino. Let's start by telling me your name.");
+            string playerName = Console.ReadLine();
+            Console.WriteLine("And how much money did you bring today?");
+            int bank = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Hello, {0}. Would you like to join a game of 21 right now?", playerName);
+            string answer = Console.ReadLine().ToLower();
+            if (answer == "yes" || answer == "yeah" || answer == "y" || answer == "ya")
             {
-                Console.WriteLine(card.Face + " of " + card.Suit);
+                Player player = new Player(playerName, bank);
+                Game game = new TwentyOneGame();
+                game += player;
+                player.isActivelyPlaying = true;
+                while (player.isActivelyPlaying && player.Balance > 0)
+                {
+                    game.Play();
+                }
+                game -= player;
+                Console.WriteLine("Thank you for playing!");
             }
-            Console.WriteLine(deck.Cards.Count);
+            Console.WriteLine("Feel free to look around the casino. Bye for now.");
             Console.ReadLine();
-        }
-        
-
+        }   
     }
 }
+//string text = File.ReadAllText(@"C: \Users\Kyla Kozole\Desktop\Repositories\c#.NET\Logs\log.txt"); //@ means to read the string as is, otherwise it would read as escape characters and would have to do \\
+//string text = "Here is some text.";
+//File.WriteAllText(@"C: \Users\Kyla Kozole\Desktop\Repositories\c#.NET\Logs\log.txt", text); 
+
+/*-------------------*/
+//Deck deck = new Deck();
+//deck.Shuffle(3);
+//foreach (Card card in deck.Cards)
+//{
+//    Console.WriteLine(card.Face + " of " + card.Suit);
+//}
+//Console.WriteLine(deck.Cards.Count);
+//Console.ReadLine();
+
+
+/*-------------------*/
 //lambda
 //List<int> numberList = new List<int>() { 1, 3, 25, 634, 41, 34 };
 //int sum = numberList.Where(x => x > 20).Sum();

@@ -10,61 +10,40 @@ namespace drill202_lambda
     {
         static void Main(string[] args)
         {
-            //Employee employee = new Employee();
-            //employee.firstName = new employee.firstName();
-
-            List<string> fName = new List<string>()
-            {
-                "George",
-                "Linda",
-                "Frank",
-                "Joe",
-                "Jeff",
-                "Teri",
-                "Joe",
-                "Sally",
-                "Jane",
-                "Wes",
-            };
-
-            List<string> lName = new List<string>()
-            {
-                "Johnson",
-                "Wilson",
-                "Hunt",
-                "Murdock",
-                "Lane",
-                "Anderson",
-                "Smith",
-                "Swensen",
-                "Frost",
-                "Robertson",
-            };
-            List<int> empId = new List<int>()
-            {
-                0, 1, 2, 3, 4, 5, 6, 7, 8, 9
-            };
+            List<Employee> employees = new List<Employee>();
+            Employee employee = new Employee();
+            employees.Add(new Employee() { firstName = "George", lastName = "Johnson", empId = 0 });
+            employees.Add(new Employee() { firstName = "Linda", lastName = "Wilson", empId = 1 });
+            employees.Add(new Employee() { firstName = "Frank", lastName = "Hunt", empId = 2 });
+            employees.Add(new Employee() { firstName = "Joe", lastName = "Murdock", empId = 3 });
+            employees.Add(new Employee() { firstName = "Jeff", lastName = "Lane", empId = 4 });
+            employees.Add(new Employee() { firstName = "Teri", lastName = "Anderson", empId = 5 });
+            employees.Add(new Employee() { firstName = "Joe", lastName = "Smith", empId = 6 });
+            employees.Add(new Employee() { firstName = "Sally", lastName = "Swensen", empId = 7 });
+            employees.Add(new Employee() { firstName = "Jane", lastName = "Frost", empId = 8 });
+            employees.Add(new Employee() { firstName = "Wes", lastName = "Robertson", empId = 9 });
+            
 
             //for loop
-            foreach (string name in fName)
-            {
-                if (name == "Joe")
-                {
-                    Console.WriteLine(name);
-                }
-            }
+            //foreach (Employee name in employees)
+            //{
+            //    if (name == "Joe")
+            //    {
+            //        Console.WriteLine(name);
+            //    }
+            //}
 
             //lambda
-            List<string> JoeList = fName.Where(x => x == "Joe").ToList();
-            foreach (string joe in JoeList)
+            List<Employee> JoeList = employees.Where(x => x.firstName == "Joe").ToList();
+            foreach (Employee joe in JoeList)
             {
                 Console.WriteLine(joe);
             }
 
-            List<int> idList = empId.Where(x => x > 5).ToList();
-            foreach (int id in idList)
+            List<Employee> idList = employees.Where(x => x.empId > 5).ToList();
+            foreach (Employee id in idList)
             {
-                Console.WriteLine(id);
+                Console.WriteLine(idList);
             }
 
             Console.ReadLine();
