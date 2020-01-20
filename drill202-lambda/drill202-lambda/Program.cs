@@ -37,13 +37,13 @@ namespace drill202_lambda
             List<Employee> JoeList = employees.Where(x => x.firstName == "Joe").ToList();
             foreach (Employee joe in JoeList)
             {
-                Console.WriteLine(joe);
+                Console.WriteLine("{0} {1} , EmpID: {2}",joe.firstName, joe.lastName, joe.empId);
             }
 
             List<Employee> idList = employees.Where(x => x.empId > 5).ToList();
             foreach (Employee id in idList)
             {
-                Console.WriteLine(idList);
+                Console.WriteLine("{0} {1} , EmpID: {2}", id.firstName, id.lastName, id.empId);
             }
 
             Console.ReadLine();

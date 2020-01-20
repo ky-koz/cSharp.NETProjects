@@ -321,3 +321,301 @@ Five of Diamonds
 1/18/2020 10:35:13 PM
 Nine of Clubs
 
+1/19/2020 6:04:47 PM
+Eight of Diamonds
+
+1/19/2020 6:04:47 PM
+Two of Clubs
+
+1/19/2020 6:04:47 PM
+Three of Hearts
+
+1/19/2020 6:04:47 PM
+Ace of Spades
+
+1/19/2020 6:04:50 PM
+Jack of Spades
+
+1/19/2020 6:04:55 PM
+Ace of Clubs
+
+1/19/2020 6:04:55 PM
+King of Clubs
+
+1/19/2020 6:04:56 PM
+Queen of Diamonds
+
+1/19/2020 6:05:02 PM
+Four of Hearts
+
+1/19/2020 6:05:02 PM
+Eight of Clubs
+
+1/19/2020 6:05:02 PM
+King of Hearts
+
+1/19/2020 6:05:02 PM
+King of Diamonds
+
+1/19/2020 6:05:04 PM
+Five of Hearts
+
+1/19/2020 6:05:11 PM
+Three of Clubs
+
+1/19/2020 6:05:11 PM
+Jack of Clubs
+
+1/19/2020 6:05:11 PM
+Three of Diamonds
+
+1/19/2020 6:05:11 PM
+Five of Hearts
+
+1/19/2020 6:05:13 PM
+Nine of Diamonds
+
+1/19/2020 6:05:15 PM
+Two of Diamonds
+
+1/19/2020 6:05:22 PM
+Five of Diamonds
+
+1/19/2020 6:05:27 PM
+Jack of Spades
+
+1/19/2020 6:05:27 PM
+Ace of Clubs
+
+1/19/2020 6:05:27 PM
+Queen of Spades
+
+1/19/2020 6:05:27 PM
+Eight of Spades
+
+1/19/2020 6:05:34 PM
+Two of Diamonds
+
+1/19/2020 6:05:34 PM
+Eight of Diamonds
+
+1/19/2020 6:05:34 PM
+Seven of Diamonds
+
+1/19/2020 6:05:34 PM
+Queen of Spades
+
+1/19/2020 6:05:36 PM
+Queen of Diamonds
+
+1/19/2020 6:05:44 PM
+Ace of Clubs
+
+1/19/2020 6:05:44 PM
+Nine of Diamonds
+
+1/19/2020 6:05:45 PM
+King of Spades
+
+1/19/2020 6:05:50 PM
+Two of Hearts
+
+1/19/2020 6:05:50 PM
+Ace of Spades
+
+1/19/2020 6:05:50 PM
+Five of Spades
+
+1/19/2020 6:05:50 PM
+Nine of Spades
+
+1/19/2020 6:05:51 PM
+Three of Clubs
+
+1/19/2020 6:05:53 PM
+Two of Spades
+
+1/19/2020 6:05:54 PM
+Eight of Spades
+
+1/19/2020 6:06:06 PM
+Ten of Spades
+
+1/19/2020 6:06:06 PM
+Seven of Hearts
+
+1/19/2020 6:06:06 PM
+King of Spades
+
+1/19/2020 6:06:06 PM
+Six of Clubs
+
+1/19/2020 6:06:08 PM
+Two of Clubs
+
+1/19/2020 6:06:08 PM
+Six of Hearts
+
+1/19/2020 6:06:12 PM
+Three of Spades
+
+1/19/2020 6:06:12 PM
+Ace of Hearts
+
+1/19/2020 6:06:12 PM
+Ace of Diamonds
+
+1/19/2020 6:06:12 PM
+Two of Diamonds
+
+1/19/2020 6:06:15 PM
+Five of Clubs
+
+1/19/2020 6:06:16 PM
+Eight of Clubs
+
+1/19/2020 6:06:26 PM
+Jack of Diamonds
+
+a3d8e1ba-a680-4bda-9367-869f31e3b170
+1/19/2020 7:47:54 PM
+Jack of Spades
+
+1/19/2020 7:47:54 PM
+Seven of Spades
+
+1/19/2020 7:47:54 PM
+Two of Hearts
+
+1/19/2020 7:47:54 PM
+Three of Hearts
+
+1/19/2020 7:47:56 PM
+Ten of Spades
+
+1/19/2020 7:48:01 PM
+Ten of Clubs
+
+1/19/2020 7:48:01 PM
+Five of Diamonds
+
+1/19/2020 7:48:01 PM
+Four of Clubs
+
+1/19/2020 7:48:01 PM
+Nine of Clubs
+
+1/19/2020 7:48:04 PM
+Queen of Diamonds
+
+1/19/2020 7:48:08 PM
+Queen of Clubs
+
+1/19/2020 7:48:08 PM
+Eight of Diamonds
+
+1/19/2020 7:48:08 PM
+Nine of Hearts
+
+1/19/2020 7:48:08 PM
+Jack of Hearts
+
+1/19/2020 7:48:15 PM
+Five of Diamonds
+
+1/19/2020 7:48:15 PM
+Queen of Spades
+
+1/19/2020 7:48:15 PM
+Queen of Diamonds
+
+1/19/2020 7:48:15 PM
+Ace of Hearts
+
+1/19/2020 7:48:20 PM
+Ten of Diamonds
+
+1/19/2020 7:48:20 PM
+Eight of Hearts
+
+1/19/2020 7:48:20 PM
+Nine of Diamonds
+
+1/19/2020 7:48:20 PM
+Ten of Spades
+
+1/19/2020 7:48:25 PM
+Two of Spades
+
+1/19/2020 7:48:25 PM
+Ten of Diamonds
+
+1/19/2020 7:48:25 PM
+Four of Spades
+
+1/19/2020 7:48:25 PM
+Two of Clubs
+
+1/19/2020 7:48:27 PM
+Ace of Clubs
+
+1/19/2020 7:48:29 PM
+Queen of Hearts
+
+1/19/2020 7:48:38 PM
+Jack of Hearts
+
+1/19/2020 7:48:43 PM
+Eight of Clubs
+
+1/19/2020 7:48:43 PM
+Five of Clubs
+
+1/19/2020 7:48:44 PM
+Five of Hearts
+
+1/19/2020 7:48:44 PM
+Queen of Clubs
+
+1/19/2020 7:48:46 PM
+Six of Spades
+
+1/19/2020 7:48:47 PM
+Ace of Spades
+
+1/19/2020 7:48:49 PM
+Five of Diamonds
+
+1/19/2020 7:48:53 PM
+Four of Hearts
+
+1/19/2020 7:48:53 PM
+Two of Spades
+
+1/19/2020 7:48:53 PM
+Six of Spades
+
+1/19/2020 7:48:53 PM
+Three of Spades
+
+1/19/2020 7:48:55 PM
+Six of Clubs
+
+1/19/2020 7:49:03 PM
+Ace of Clubs
+
+1/19/2020 7:49:05 PM
+Seven of Diamonds
+
+1/19/2020 7:49:08 PM
+Ten of Spades
+
+1/19/2020 7:49:08 PM
+Ace of Clubs
+
+1/19/2020 7:49:08 PM
+King of Diamonds
+
+1/19/2020 7:49:08 PM
+Queen of Hearts
+

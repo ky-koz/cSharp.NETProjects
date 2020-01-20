@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Casino.Interfaces
+namespace drill231_constVarGuid
 {
-    interface IWalkAway
+    class Class1
     {
-      void WalkAway(Player player);
-
     }
 }

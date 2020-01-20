@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Casino;
+using Casino.twentyOne;
 
 namespace twentyOne
 {
@@ -11,7 +13,9 @@ namespace twentyOne
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Grand Hotel and Casino. Let's start by telling me your name.");
+            const string casinoName = "Grand Hotel and Casino";
+
+            Console.WriteLine("Welcome to the {0}. Let's start by telling me your name.", casinoName);
             string playerName = Console.ReadLine();
             Console.WriteLine("And how much money did you bring today?");
             int bank = Convert.ToInt32(Console.ReadLine());
@@ -20,6 +24,11 @@ namespace twentyOne
             if (answer == "yes" || answer == "yeah" || answer == "y" || answer == "ya")
             {
                 Player player = new Player(playerName, bank);
+                player.Id = Guid.NewGuid();
+                using (StreamWriter file = new StreamWriter(@"C: \Users\Kyla Kozole\Desktop\Repositories\c#.NET\Logs\log.txt", true)) //log the string card, dealing with unmanaged code, have to dispose of afterwards
+                {
+                    file.WriteLine(player.Id);
+                }
                 Game game = new TwentyOneGame();
                 game += player;
                 player.isActivelyPlaying = true;
@@ -35,7 +44,9 @@ namespace twentyOne
         }   
     }
 }
-
+//var newPlayer = new Player("Jesse"); //utilizing constructor chaining
+//Guid identifier = Guid.NewGuid(); //making a new guid
+/*-------------------*/
 //DateTime yearOfBirth = new DateTime(1995, 5, 23, 8, 32, 45);
 //DateTime yearOfGraduation = new DateTime(2013, 6, 1, 16, 34, 22);
 

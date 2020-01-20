@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Casino.Interfaces;
 
-namespace twentyOne
+namespace Casino.twentyOne
 {
     public class TwentyOneGame : Game, IWalkAway //this means class TwentyOneGame will inherit from class Game
     {
