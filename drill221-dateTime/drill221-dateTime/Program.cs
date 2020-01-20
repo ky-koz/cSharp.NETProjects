@@ -22,6 +22,8 @@ namespace drill221_dateTime
     }
 }
 
+//add user hours to current time to get exact time in future
+
 //1. Prints the current date and time to the console.
 
 //2. Asks the user for a number.
