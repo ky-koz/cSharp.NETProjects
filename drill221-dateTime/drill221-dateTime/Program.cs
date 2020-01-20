@@ -10,12 +10,18 @@ namespace drill221_dateTime
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(DateTime.Now);
+            //data type DateTime
+            DateTime now = DateTime.Now;
 
-            Console.WriteLine("Please type a whole number: ");
+            Console.WriteLine("The current time is: ");
+            Console.WriteLine(now);
+
+            Console.WriteLine("Please type a whole number to add to the current time: ");
             int x = Convert.ToInt32(Console.ReadLine());
-            TimeSpan ts = TimeSpan.FromHours(x);
-            Console.WriteLine(ts);
+
+            Console.WriteLine("In {0} hours, the time will be: ", x);
+            DateTime future = now.AddHours(x);
+            Console.WriteLine(future);
 
             Console.ReadLine();
         }
@@ -30,3 +36,6 @@ namespace drill221_dateTime
 
 //3. Prints to the console the exact time it will be in X hours, X being 
 //the number the user entered in step 2.
+
+//TimeSpan ts = TimeSpan.FromHours(x);
+//Console.WriteLine(ts);
