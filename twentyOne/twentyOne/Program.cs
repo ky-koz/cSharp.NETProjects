@@ -17,8 +17,17 @@ namespace twentyOne
 
             Console.WriteLine("Welcome to the {0}. Let's start by telling me your name.", casinoName);
             string playerName = Console.ReadLine();
-            Console.WriteLine("And how much money did you bring today?");
-            int bank = Convert.ToInt32(Console.ReadLine());
+
+            bool validAnswer = false;
+            int bank = 0;
+            while (!validAnswer)
+            {
+                Console.WriteLine("And how much money did you bring today?");
+                validAnswer = int.TryParse(Console.ReadLine(), out bank);
+                if (!validAnswer) Console.WriteLine("Please enter digits only.");
+            }
+
+            
             Console.WriteLine("Hello, {0}. Would you like to join a game of 21 right now?", playerName);
             string answer = Console.ReadLine().ToLower();
             if (answer == "yes" || answer == "yeah" || answer == "y" || answer == "ya")
@@ -44,6 +53,11 @@ namespace twentyOne
         }   
     }
 }
+
+//Console.WriteLine("And how much money did you bring today?");
+//int bank = Convert.ToInt32(Console.ReadLine());
+
+/*-------------------*/
 //var newPlayer = new Player("Jesse"); //utilizing constructor chaining
 //Guid identifier = Guid.NewGuid(); //making a new guid
 /*-------------------*/

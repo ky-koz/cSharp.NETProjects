@@ -10,16 +10,17 @@ namespace drill231_constVarGuid
     {
         static void Main(string[] args)
         {
-            Class1 name = new Class1();
-            name.Name = "Tech Academy";
-            name.Location = "Remote";
+            Academy name = new Academy("Tech Academy");
+            //name.Name = "Tech Academy";
+            //name.Location = "Remote";
+            Console.WriteLine("{0} {1} ", name.Name, name.Location);
             
             const string studentName = "Kyla";
             var drill = "drill";
 
-            Console.WriteLine("These {0} assignments have been completed by {1}.", studentName, drill);
+            Console.WriteLine("These {0} assignments have been completed by {1}.", drill, studentName);
 
-            
+            Console.ReadLine();
         }        
     }
 }
