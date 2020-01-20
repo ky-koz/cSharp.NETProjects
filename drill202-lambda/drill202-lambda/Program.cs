@@ -22,24 +22,29 @@ namespace drill202_lambda
             employees.Add(new Employee() { firstName = "Sally", lastName = "Swensen", empId = 7 });
             employees.Add(new Employee() { firstName = "Jane", lastName = "Frost", empId = 8 });
             employees.Add(new Employee() { firstName = "Wes", lastName = "Robertson", empId = 9 });
-            
+
 
             //for loop
-            //foreach (Employee name in employees)
-            //{
-            //    if (name == "Joe")
-            //    {
-            //        Console.WriteLine(name);
-            //    }
-            //}
-
+            Console.WriteLine("For Loop List of Joe's: ");
+            List<Employee> joeLoop = new List<Employee>();
+            foreach (Employee name in employees)
+            {
+                if (name.firstName == "Joe")
+                {
+                    joeLoop.Add(new Employee());
+                    Console.WriteLine("{0} {1} , EmpID: {2}", name.firstName, name.lastName, name.empId);
+                }
+            }
+            
             //lambda
+            Console.WriteLine("\nLambda List of Joe's: ");
             List<Employee> JoeList = employees.Where(x => x.firstName == "Joe").ToList();
             foreach (Employee joe in JoeList)
             {
                 Console.WriteLine("{0} {1} , EmpID: {2}",joe.firstName, joe.lastName, joe.empId);
             }
 
+            Console.WriteLine("\nLambda List EmpID > 5: ");
             List<Employee> idList = employees.Where(x => x.empId > 5).ToList();
             foreach (Employee id in idList)
             {

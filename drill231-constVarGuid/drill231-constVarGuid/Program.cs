@@ -10,6 +10,21 @@ namespace drill231_constVarGuid
     {
         static void Main(string[] args)
         {
-        }
+            Class1 name = new Class1();
+            name.Name = "Tech Academy";
+            
+            const string studentName = "Kyla";
+            var drill = "drill";
+
+            Console.WriteLine("These {0} assignments have been completed by {1}.", studentName, drill);
+
+            
+        }        
     }
 }
+
+//1. Create a const variable.
+
+//2. Create a variable using the keyword "var".
+
+//3. Chain two constructors together.
