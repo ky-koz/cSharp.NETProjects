@@ -12,6 +12,7 @@ namespace drill231_constVarGuid
         {
             Class1 name = new Class1();
             name.Name = "Tech Academy";
+            name.Location = "Remote";
             
             const string studentName = "Kyla";
             var drill = "drill";

@@ -31,7 +31,7 @@ namespace drill202_lambda
             {
                 if (name.firstName == "Joe")
                 {
-                    joeLoop.Add(new Employee());
+                    joeLoop.Add(name);
                     Console.WriteLine("{0} {1} , EmpID: {2}", name.firstName, name.lastName, name.empId);
                 }
             }
