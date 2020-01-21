@@ -21,17 +21,19 @@ namespace drill235_exceptionErrors
                 {
                     Console.WriteLine("Please type your age: ");
                     int age = Convert.ToInt32(Console.ReadLine());
+                    if (age < 1)
+                    {
+                        throw new InputException();
+                    }
+                    //born.Subtract(age);
 
-                    born.Subtract(age);
-
-                    //Console.WriteLine("You were born in the year {0}.", );
+                    Console.WriteLine("You were born in the year {0}.", born.Subtract(age);
                     
                     go = false;
                 }
                 catch (InputException)
                 {
-                    Console.WriteLine("Please type whole numbers only, no decimals.");
-                    Console.ReadLine();                    
+                    Console.WriteLine("Please type whole numbers only, no decimals.");                   
                 }
                 catch (Exception)
                 {

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.IO;
 using Casino;
 using Casino.twentyOne;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace twentyOne
 {
@@ -47,15 +49,17 @@ namespace twentyOne
                     {
                         game.Play();
                     }
-                    catch (FraudException)
+                    catch (FraudException ex)
                     {
                         Console.WriteLine("Security! Kick this person out.");
+                        UpdateDbWithException(ex);
                         Console.ReadLine();
                         return;
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
                         Console.WriteLine("An error occurred. Please contact your System Administrator");
+                        UpdateDbWithException(ex); //passing in ex as an exception object to this method
                         Console.ReadLine();
                         return;
                     }
@@ -66,6 +70,34 @@ namespace twentyOne
             Console.WriteLine("Feel free to look around the casino. Bye for now.");
             Console.ReadLine();
         }   
+        private static void UpdateDbWithException(Exception ex)
+        {
+            string connectionString = @"Data Source=(localdb)\ProjectsV13;Initial Catalog=TwentyOneGame;
+                                        Integrated Security=True;Connect Timeout=30;Encrypt=False;
+                                        TrustServerCertificate=False;ApplicationIntent=ReadWrite;
+                                        MultiSubnetFailover=False";
+            string queryString = @"INSERT INTO Exceptions (ExceptionType, ExceptionMessage, TimeStamp) VALUES
+                                    (@ExceptionType, @ExceptionMessage, @TimeStamp)";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            { 
+                //parameters & query string
+                SqlCommand command = new SqlCommand(queryString, connection);
+                command.Parameters.Add("@ExceptionType", SqlDbType.VarChar); //by naming its data type, you're protecting against SQL injection
+                command.Parameters.Add("@ExceptionMessage", SqlDbType.VarChar);
+                command.Parameters.Add("@Timestamp", SqlDbType.DateTime);
+
+                //specifying which collection item
+                command.Parameters["@ExceptionType"].Value = ex.GetType().ToString();
+                command.Parameters["@ExceptionMessage"].Value = ex.Message;
+                command.Parameters["@TimeStamp"].Value = DateTime.Now;
+
+                // open connection, execute cmd, sending to Db
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            } 
+        }
     }
 }
 
