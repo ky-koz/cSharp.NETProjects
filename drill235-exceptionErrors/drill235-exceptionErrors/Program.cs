@@ -25,10 +25,9 @@ namespace drill235_exceptionErrors
                     {
                         throw new InputException();
                     }
-                    //born.Subtract(age);
 
-                    Console.WriteLine("You were born in the year {0}.", born.Subtract(age);
-                    
+                    Console.WriteLine("You were born in the year {0}.", born.Subtract(age));
+
                     go = false;
                 }
                 catch (InputException)

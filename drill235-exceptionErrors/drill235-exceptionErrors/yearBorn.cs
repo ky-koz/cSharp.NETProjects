@@ -11,12 +11,12 @@ namespace drill235_exceptionErrors
     public class yearBorn 
     {
         
-        public void Subtract (int age)
+        public int Subtract (int age)
         {
             DateTime now = DateTime.Now;
             DateTime born = now.AddYears(-age);
-            Console.WriteLine(born);
-            Console.ReadLine();
+            int year = born.Year;
+            return year;
         }
 }
 }
