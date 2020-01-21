@@ -32,7 +32,7 @@ namespace drill235_exceptionErrors
                 }
                 catch (InputException)
                 {
-                    Console.WriteLine("Please type whole numbers only, no decimals.");                   
+                    Console.WriteLine("Please type whole numbers only.");                   
                 }
                 catch (Exception)
                 {
