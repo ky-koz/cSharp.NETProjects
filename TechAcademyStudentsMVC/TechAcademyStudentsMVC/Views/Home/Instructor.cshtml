@@ -1,0 +1,35 @@
+﻿@using TechAcademyStudentsMVC.Models
+@model Instructor 
+    @*get acces to the model passed from the controller, 
+    add @model to the top of the .cshtml file, along with the data type.
+    add the using statement to refer to the INstructor class without
+    prefixing it every time with TechAcademtStudentsMVC.Models*@
+
+
+@{
+    ViewBag.Title = "Instructor";
+}
+
+<h2>Instructor</h2>
+
+<h5>
+    Details for Instructor with ID: @ViewBag.Id
+</h5>
+
+<p>
+    Further details about the Instructor:
+</p>
+<ul>
+    <li>
+        Another Id: @Model.Id
+            @*to reference the model passed from the controller,
+            type @Model*@
+    </li>
+    <li>
+        First Name: @Model.FirstName
+    </li>
+    <li>
+        Last Name: @Model.LastName
+    </li>
+</ul>
+

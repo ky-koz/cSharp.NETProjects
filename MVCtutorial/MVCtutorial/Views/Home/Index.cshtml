@@ -1,0 +1,41 @@
+﻿@model MVCtutorial.Models.User
+    
+<h1>
+    @Model.Id
+</h1>
+
+<h1>
+    @Model.FirstName
+</h1>
+
+<h1>
+    @Model.LastName
+</h1>
+
+<h1>
+    @Model.Age
+</h1>
+
+
+
+
+
+
+@*// @ViewBag.RandomNumber*@
+@*@model  List<string>
+
+    @foreach (var name in Model)
+    {
+        <h1>
+            @name @*have to use the raor syntax within the html tags
+        </h1>
+    }*@
+
+
+@*@using System.Collections.Generic
+
+@model int
+
+<h1>
+    @Model
+</h1>*@
