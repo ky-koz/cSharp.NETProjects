@@ -12,7 +12,6 @@ namespace NewsletterAppMVC305.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly string connectionString = @"Data Source=DESKTOP-K1MAO28\SQLEXPRESS;Initial Catalog=Newsletter;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         public ActionResult Index()
         {
@@ -28,76 +27,75 @@ namespace NewsletterAppMVC305.Controllers
             }
             else
             {
-                string queryString = @"INSERT INTO SignUps (FirstName, LastName, EmailAddress) VALUES
-                                        (@FirstName, @LastName, @EmailAddress)";
-
-                //when conencting with an external db always wrap in a using statement so the connection gets cut off when done
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                using (NewsletterEntities db = new NewsletterEntities())
                 {
-                    SqlCommand command = new SqlCommand(queryString, connection);
-                    command.Parameters.Add("@FirstName", SqlDbType.VarChar);
-                    command.Parameters.Add("@LastName", SqlDbType.VarChar);
-                    command.Parameters.Add("@EmailAddress", SqlDbType.VarChar);
+                    var signup = new SignUp();
+                    signup.FirstName = firstName;
+                    signup.LastName = lastName;
+                    signup.EmailAddress = emailAddress;
 
-                    command.Parameters["@FirstName"].Value = firstName;
-                    command.Parameters["@LastName"].Value = lastName;
-                    command.Parameters["@EmailAddress"].Value = emailAddress;
-
-                    //open a connection and execute query
-                    connection.Open();
-                    command.ExecuteNonQuery(); //an insert is a nonQuery
-                    connection.Close();
+                    db.SignUps.Add(signup);
+                    db.SaveChanges();
 
                 }
-                    return View("Success");
+                return View("Success");
             }
         }
 
-        public ActionResult Admin()
-        {
-            //using to acces the db
-            using (NewsletterEntities db = new NewsletterEntities())
-            {
-                // prop SignUps (in Newsletter.Context.cs) that represents all of the records in our db
-                var signups = db.SignUps;
-                var signupVms = new List<SignupVm>();
-                foreach (var signup in signups)
-                {
-                    var signupVm = new SignupVm();
-                    signupVm.FirstName = signup.FirstName;
-                    signupVm.LastName = signup.LastName;
-                    signupVm.EmailAddress = signup.EmailAddress;
-                    signupVms.Add(signupVm);
-                }
-
-                return View(signupVms);
-            }
-
-            //string queryString = @"SELECT Id, FirstName, LastName, EmailAddress, SocialSecurityNumber from SignUps";
-            //List<NewsletterSignUp> signups = new List<NewsletterSignUp>();
-
-            //using (SqlConnection connection = new SqlConnection(connectionString))
-            //{
-            //    SqlCommand command = new SqlCommand(queryString, connection);
-
-            //    connection.Open();
-
-            //    SqlDataReader reader = command.ExecuteReader();
-
-            //    while (reader.Read())
-            //    {
-            //        var signup = new NewsletterSignUp(); /*of datatype NewsletterSignUp()*/
-            //        signup.Id = Convert.ToInt32(reader["Id"]);
-            //        signup.FirstName = reader["FirstName"].ToString();
-            //        signup.LastName = reader["LastName"].ToString();
-            //        signup.EmailAddress = reader["EmailAddress"].ToString();
-            //        signup.SocialSecurityNumber = reader["SocialSecurityNumber"].ToString();
-
-            //        signups.Add(signup);
-            //    }
        
-            //}
-            
-        }
     }
 }
+
+
+
+//been replaced by the newsletter entity code 
+//private readonly string connectionString = @"Data Source=DESKTOP-K1MAO28\SQLEXPRESS;Initial Catalog=Newsletter;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+//signup method
+//string queryString = @"INSERT INTO SignUps (FirstName, LastName, EmailAddress) VALUES
+//                        (@FirstName, @LastName, @EmailAddress)";
+
+////when conencting with an external db always wrap in a using statement so the connection gets cut off when done
+//using (SqlConnection connection = new SqlConnection(connectionString))
+//{
+//    SqlCommand command = new SqlCommand(queryString, connection);
+//    command.Parameters.Add("@FirstName", SqlDbType.VarChar);
+//    command.Parameters.Add("@LastName", SqlDbType.VarChar);
+//    command.Parameters.Add("@EmailAddress", SqlDbType.VarChar);
+
+//    command.Parameters["@FirstName"].Value = firstName;
+//    command.Parameters["@LastName"].Value = lastName;
+//    command.Parameters["@EmailAddress"].Value = emailAddress;
+
+//    //open a connection and execute query
+//    connection.Open();
+//    command.ExecuteNonQuery(); //an insert is a nonQuery
+//    connection.Close();
+
+//}
+
+//Admin method
+//string queryString = @"SELECT Id, FirstName, LastName, EmailAddress, SocialSecurityNumber from SignUps";
+//List<NewsletterSignUp> signups = new List<NewsletterSignUp>();
+
+//using (SqlConnection connection = new SqlConnection(connectionString))
+//{
+//    SqlCommand command = new SqlCommand(queryString, connection);
+
+//    connection.Open();
+
+//    SqlDataReader reader = command.ExecuteReader();
+
+//    while (reader.Read())
+//    {
+//        var signup = new NewsletterSignUp(); /*of datatype NewsletterSignUp()*/
+//        signup.Id = Convert.ToInt32(reader["Id"]);
+//        signup.FirstName = reader["FirstName"].ToString();
+//        signup.LastName = reader["LastName"].ToString();
+//        signup.EmailAddress = reader["EmailAddress"].ToString();
+//        signup.SocialSecurityNumber = reader["SocialSecurityNumber"].ToString();
+
+//        signups.Add(signup);
+//    }
+
+//}

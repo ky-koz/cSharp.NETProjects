@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewsletterAppMVC305
+namespace NewsletterAppMVC305.Models
 {
     using System;
     using System.Data.Entity;
