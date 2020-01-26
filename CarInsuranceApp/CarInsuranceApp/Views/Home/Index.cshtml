@@ -1,0 +1,45 @@
+﻿<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0"Please fill out the customer information below</h5>
+        </div>
+        <div class="card-body">
+            @using (Html.BeginForm("CustomerInfo", "Home", FormMethod.Post))
+            {
+            <div class="row no-gutters">
+                <div class="form-group col-lg-12">
+                    <input name="FirstName" type="text" class="form-control" placeholder="First Name" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="LastName" type="text" class="form-control" placeholder="Last Name" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="EmailAddress" type="email" class="form-control" placeholder="Email Address" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="DateOfBirth" type="date" class="form-control" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="CarYear" type="number" class="form-control" placeholder="ex: 2013" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="CarMake" type="text" class="form-control" placeholder="ex: Honda" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="CarModel" type="text" class="form-control" placeholder="ex: CR-V" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="DUI" type="text" class="form-control" placeholder="true or false" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="SpeedingTickets" type="number" class="form-control" placeholder="# of tickets" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input name="InsuranceType" type="number" class="form-control" placeholder="1 or 2" />
+                </div>
+                <button type="submit" class="btn-block btn-primary">Submit</button>
+            </div>
+            }
+        </div>
+    </div>
+</div>
