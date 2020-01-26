@@ -50,6 +50,37 @@ namespace CarInsurance.Controllers
         {
             if (ModelState.IsValid)
             {
+                //add return Value for the quote
+                //Start with a base of $50 / month.
+                int start = 50;
+                DateTime now = DateTime.Today;
+                TimeSpan age = now - insuree.DateOfBirth;
+                
+                int userAge = Convert.ToInt32(age);
+                //If the user is under 25, add $25 to the monthly total.
+                if (userAge < 18)
+                {
+                    Console.WriteLine("yes");
+                }
+
+                //If the user is under 18, add $100 to the monthly total.
+
+                //If the user is over 100, add $25 to the monthly total.
+
+                //If the car's year is before 2000, add $25 to the monthly total.
+
+                //If the car's year is after 2015, add $25 to the monthly total.
+
+                //If the car's Make is a Porsche, add $25 to the price.
+
+                //If the car's Make is a Porsche and its model is a 911 Carrera, add an additional $25 to the price.
+
+                //Add $10 to the monthly total for every speeding ticket the user has.
+
+                //If the user has ever had a DUI, add 25 % to the total.
+
+                //If it's full coverage, add 50% to the total.
+
                 db.Insurees.Add(insuree);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -125,3 +156,26 @@ namespace CarInsurance.Controllers
         }
     }
 }
+
+
+//Start with a base of $50 / month.
+
+//If the user is under 25, add $25 to the monthly total.
+
+//If the user is under 18, add $100 to the monthly total.
+
+//If the user is over 100, add $25 to the monthly total.
+
+//If the car's year is before 2000, add $25 to the monthly total.
+
+//If the car's year is after 2015, add $25 to the monthly total.
+
+//If the car's Make is a Porsche, add $25 to the price.
+
+//If the car's Make is a Porsche and its model is a 911 Carrera, add an additional $25 to the price.
+
+//Add $10 to the monthly total for every speeding ticket the user has.
+
+//If the user has ever had a DUI, add 25% to the total.
+
+//If it's full coverage, add 50% to the total.

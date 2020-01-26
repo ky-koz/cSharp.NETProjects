@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mathInsurance", "mathInsurance\mathInsurance.csproj", "{FABD4364-6B8D-473B-A22E-56ED93EF302A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FABD4364-6B8D-473B-A22E-56ED93EF302A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FABD4364-6B8D-473B-A22E-56ED93EF302A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FABD4364-6B8D-473B-A22E-56ED93EF302A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FABD4364-6B8D-473B-A22E-56ED93EF302A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A434865-4D32-4520-A63E-6EB43E3E1DC6}
+	EndGlobalSection
+EndGlobal
