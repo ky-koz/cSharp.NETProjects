@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CarInsurance.Models;
 
 namespace CarInsurance.Controllers
 {
@@ -15,7 +16,8 @@ namespace CarInsurance.Controllers
 
         public ActionResult Admin()
         {
-            return View();
+            InsuranceEntities db = new InsuranceEntities();
+            return View(db.Insurees.ToList());
         }
 
     }
