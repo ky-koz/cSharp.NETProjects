@@ -50,36 +50,67 @@ namespace CarInsurance.Controllers
         {
             if (ModelState.IsValid)
             {
-                //add return Value for the quote
+                DateTime now = DateTime.Now;
+                TimeSpan diff = now - insuree.DateOfBirth;
+                int answer = Convert.ToInt32(diff.TotalDays);
+                int age = answer / 365;
+
                 //Start with a base of $50 / month.
                 int start = 50;
-                DateTime now = DateTime.Today;
-                TimeSpan age = now - insuree.DateOfBirth;
-                
-                int userAge = Convert.ToInt32(age);
-                //If the user is under 25, add $25 to the monthly total.
-                if (userAge < 18)
+
+
+                //1.If the user is under 25, add $25 to the monthly total.
+                //2.If the user is under 18, add $100 to the monthly total.
+                //3.If the user is over 100, add $25 to the monthly total.
+                if (age < 25 && age > 18)
                 {
-                    Console.WriteLine("yes");
+                    start += 25;
+                }
+                else if (age < 18)
+                {
+                    start += 100;
+                }
+                else if (age > 100)
+                {
+                    start += 25;
+                }
+                //4.If the car's year is before 2000, add $25 to the monthly total.
+                //5.If the car's year is after 2015, add $25 to the monthly total.
+                if (insuree.CarYear < 2000)
+                {
+                    start += 25;
+                }
+                else if (insuree.CarYear > 2015)
+                {
+                    start += 25;
+                }
+                //6.If the car's Make is a Porsche, add $25 to the price.
+                if (insuree.CarMake.ToLower() == "porsche")
+                {
+                    start += 25;
+                }
+                //7.If the car's Make is a Porsche and its model is a 911 Carrera, add an additional $25 to the price.
+                if (insuree.CarMake.ToLower() == "porsche" && insuree.CarModel.ToLower() == "911 carrera")
+                {
+                    start += 25;
+                }
+                //8.Add $10 to the monthly total for every speeding ticket the user has.
+                start += insuree.SpeedingTickets * 10;
+
+                double total = Convert.ToDouble(start);
+
+                //9.If the user has ever had a DUI, add 25 % to the total.
+                if (insuree.DUI)
+                {
+                    total *= 1.25;
+                }
+                //10.If it's full coverage, add 50% to the total.
+                if (insuree.CoverageType)
+                {
+                    total *= 1.50;
                 }
 
-                //If the user is under 18, add $100 to the monthly total.
-
-                //If the user is over 100, add $25 to the monthly total.
-
-                //If the car's year is before 2000, add $25 to the monthly total.
-
-                //If the car's year is after 2015, add $25 to the monthly total.
-
-                //If the car's Make is a Porsche, add $25 to the price.
-
-                //If the car's Make is a Porsche and its model is a 911 Carrera, add an additional $25 to the price.
-
-                //Add $10 to the monthly total for every speeding ticket the user has.
-
-                //If the user has ever had a DUI, add 25 % to the total.
-
-                //If it's full coverage, add 50% to the total.
+                insuree.Quote = Convert.ToDecimal(total);
 
                 db.Insurees.Add(insuree);
                 db.SaveChanges();
@@ -113,6 +144,56 @@ namespace CarInsurance.Controllers
         {
             if (ModelState.IsValid)
             {
+                DateTime now = DateTime.Now;
+                TimeSpan diff = now - insuree.DateOfBirth;
+                int answer = Convert.ToInt32(diff.TotalDays);
+                int age = answer / 365;
+                Console.WriteLine(age);
+
+                int start = 50;
+
+                if (age < 25 && age > 18)
+                {
+                    start += 25;
+                }
+                else if (age < 18)
+                {
+                    start += 100;
+                }
+                else if (age > 100)
+                {
+                    start += 25;
+                }
+                if (insuree.CarYear < 2000)
+                {
+                    start += 25;
+                }
+                else if (insuree.CarYear > 2015)
+                {
+                    start += 25;
+                }
+                if (insuree.CarMake.ToLower() == "porsche")
+                {
+                    start += 25;
+                }
+                if (insuree.CarMake.ToLower() == "porsche" && insuree.CarModel.ToLower() == "911 carrera")
+                {
+                    start += 25;
+                }
+                start += insuree.SpeedingTickets * 10;
+
+                double total = Convert.ToDouble(start);
+
+                if (insuree.DUI)
+                {
+                    total *= 1.25;
+                }
+                if (insuree.CoverageType)
+                {
+                    total *= 1.50;
+                }
+
+                insuree.Quote = Convert.ToDecimal(total);
                 db.Entry(insuree).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
