@@ -172,7 +172,7 @@ public void RentalAddCalendar(RentalRequest rentalRequest)
 ### New ProductionPhotos Class
 Each production will have a primary image as part of the Production class, but there needs to be an additional database to store all related images of that Production. 
 
-Created a new class for the ProductionPhotos, added the DbSet to the Identity Models, created a controller and scaffoled the basic views. Used the Production table to assign a productionId to the ProductionPhotos table. Create view utilizes the ImageUploader helper to convert and add the photo as a byte array. The Index displays the list of entries in the ProductionPhotos table and a thumbnail of the image by utilizing the helper. Productions were formatted as a dropdown selection in the Create and Edit Views.
+Created a new class for the ProductionPhotos, added the DbSet to the Identity Models, created a controller and scaffolded the basic views. Used the Production table to assign a productionId to the ProductionPhotos table. Create view utilizes the ImageUploader helper to convert and add the photo as a byte array. The Index displays the list of entries in the ProductionPhotos table and a thumbnail of the image by utilizing the helper. Productions were formatted as a dropdown selection in the Create and Edit Views.
 
 ProductionPhotosController.cs
 ```
@@ -489,9 +489,9 @@ Index.cshtml
 [Back to Top](#table-of-contents)
 
 ### Front End: Update Create & Edit Pages
-Need to restyle the Create & Edit pages to take up more of the sceen and be easier to view. Styling needs to fit with the rest of the site.
+Need to restyle the Create & Edit pages to take up more of the screen and be easier to view. Styling needs to fit with the rest of the site.
 
-Added classes to the Site.css for the forms in the Edit and Create views. Styling including centering all fields and making alignment consistent throughout all elements. Chose sans serif font and appropriate weight for each field of text. Ensured each dropdown was formatted visually consistent with the text boxes and made edits to display options from their corresponding database. Reformatted the create and save button to submit the data working within the site colors.
+Added classes to the Site.css for the forms in the Edit and Create views. Styling included centering all fields and making alignment consistent throughout all elements. Chose sans serif font and appropriate weight for each field of text. Ensured each dropdown was formatted visually consistent with the text boxes and made edits to display options from their corresponding database. Reformatted the create and save button to submit the data working within the site colors.
 
 Site.css
 ```
