@@ -5,7 +5,6 @@ C# .NET Framework projects completed with the Tech Academy
 The files found in the codingDrills folder are chunks of code used to learn the basics and application of C#, .NET Framework, and MVC architecture. The code snippets below are from a live project in which we applied SCRUM methodology in two-week sprints. With up to ten people working on the project at a time, we each worked on seperate stories that broke tasks into manageable peices. We collaborated as a team via Slack to exchange challenges, solutions, and communications.
 
 ## Live Project
-### About This Project
 Software designed for a theater company to manage its website content without needing any technical knowledge. It will have multiple areas to manage admin needs, subscriber needs, and general public needs. The site will include information on the current season, past productions, the current cast members. It will allow the acting company to easily upload content. It will allow subscribers to easily manage their subscriptions.
 
 ## Story Index
