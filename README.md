@@ -17,7 +17,7 @@ Software designed for a theater company to manage its website content without ne
 * [Create New ImageUpload Helper Method](#create-new-imageupload-helper-method)
 
 ### Create Admin Controller and Views
-The site required an area for admins to manage content and various other items via special views (not based on a specific model) that could access the database. 
+The site requires an area for admins to manage content and various other items via special views (not based on a specific model) that could access the database. 
 
 Created a new Admin Controller with a Dashboard view that provided navigation to other index pages.
 
