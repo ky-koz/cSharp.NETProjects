@@ -86,7 +86,7 @@ Dashboard.cshtml
     </li>
 </ul>
 ```
-[Back to Top](#table-of-contents)
+[Back to Top](#general-info)
 
 ### Auto Create Calendar Items from RentalRequest
 When creating a RentalRequest item the CalandarEvent class needs to automatically pull from the RentalRequest and Productions tables and populate a new CalendarEvent item. 
@@ -165,7 +165,7 @@ public void RentalAddCalendar(RentalRequest rentalRequest)
         }
 ```
 
-[Back to Top](#table-of-contents)
+[Back to Top](#general-info)
 
 ### New ProductionPhotos Class
 Each production will have a primary image as part of the Production class, but there needs to be an additional database to store all related images of that Production. 
@@ -333,7 +333,7 @@ Edit.cshtml
     </div>
 ```
 
-[Back to Top](#table-of-contents)
+[Back to Top](#general-info)
 
 ### Fix DisplayInfo Null Bug
 If you don't change the image when trying to edit the object, the DisplayInfo Edit view will throw a null reference error.
@@ -405,7 +405,7 @@ Edit.cshtml
      </div>
 ```
 
-[Back to Top](#table-of-contents)
+[Back to Top](#general-info)
 
 ### Restyle ProductionPhotos Views
 Pages associated with ProductionPhotos needs to be restyled and modified to display information as desired.
@@ -484,7 +484,7 @@ Index.cshtml
     <tr class="tr-styling">
         <th class="th-styling">
 ```
-[Back to Top](#table-of-contents)
+[Back to Top](#general-info)
 
 ### Front End: Update Create & Edit Pages
 Need to restyle the Create & Edit pages to take up more of the screen and be easier to view. Styling needs to fit with the rest of the site.
@@ -597,7 +597,7 @@ Site.css
     background-color: var(--main-bg-color);
 }
 ```
-[Back to Top](#table-of-contents)
+[Back to Top](#general-info)
 
 ### Create New ImageUpload Helper Method
 Need to create a method that the entire project can access within the UploadController to accept a byte array and return a file that is a jpeg image. 
@@ -652,3 +652,5 @@ Index.cshtml
 ```		
 <img src="@Url.Action("ImageView", "ImageUpload", new { id = item.SponsorId, table="Sponsor", thumbHeight = 100, thumbWidth = 100})" />
 ```
+
+[Back to Top](#general-info)
